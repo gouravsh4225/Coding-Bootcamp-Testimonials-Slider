@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --dark_blue: hsl(240, 38%, 20%);
+  --grayish_blue: hsl(240, 18%, 77%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  margin: 20px auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background: white;
+  font-family: "Inter", sans-serif;
+  height: 500px;
+  position: relative;
+  transition: all 0.5s;
+}
+.card-left {
+  position: relative;
+}
+.card-left .quotes-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 40px;
+  transform: translate(-50%, 50%);
+}
+.card-left .descri {
+  margin-top: 40px;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  color: var(--dark_blue);
+  font-size: 16px;
+  letter-spacing: 1px;
+  word-wrap: break-word;
+}
+.card-left .user {
+  margin-top: 10px;
+  color: var(--dark_blue);
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+.card-left .user .user-role {
+  font-family: "Inter", sans-serif;
+  display: block;
+  color: var(--grayish_blue);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.card-right {
+  display: flex;
+  align-items: center;
+  background: url("./images/pattern-bg.svg") no-repeat center/contain;
+  height: 100%;
+  position: relative;
+}
+.card-right .user-image {
+  height: 175px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.testimonials-buttons {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  border-radius: 30px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+}
+.testimonials-buttons img {
+  display: inline-block;
+  padding: 0.8rem;
+  cursor: pointer;
+  outline: none;
+}
+.card-bottom-bg {
+  background: url("./images/pattern-curve.svg") no-repeat center/cover;
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  top: 94%;
+  left: 0;
+}
+
+@media only screen and (min-width: 720px) {
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    max-width: 900px;
+    margin: 20px auto;
+  }
+  .cards-wrapper {
+    display: flex;
+  }
+  .card {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .card-left,
+  .card-right {
+    width: 50%;
+  }
+  .card-right .user-image {
+    height: 300px;
+  }
+  .testimonials-buttons {
+    bottom: 16%;
+    left: 33%;
+  }
+}
